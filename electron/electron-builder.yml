@@ -1,0 +1,19 @@
+appId: com.jondari.creaturenexustcg
+productName: Creature Nexus TCG
+files:
+  - dist/**/*
+  - electron/**/*
+  - package.json
+  - "!node_modules/**/*"
+directories:
+  output: release
+  buildResources: assets/images
+extraMetadata:
+  main: electron/main.js
+asar: true
+asarUnpack: []
+win:
+  target:
+    - nsis
+  icon: assets/images/icon.png
+publish: []

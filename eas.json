@@ -1,0 +1,26 @@
+{
+  "cli": {
+    "version": ">= 16.17.4",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "distribution": "internal"            // generate APK
+    },
+    "preview-store": {
+      "distribution": "store",              // important to target the store
+      "android": { "buildType": "app-bundle" }, // AAB (not APK)
+      "autoIncrement": true
+    },
+    "production": {
+      "autoIncrement": true
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}

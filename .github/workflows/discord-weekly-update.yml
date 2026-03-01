@@ -1,0 +1,38 @@
+name: Discord Weekly Update
+
+on:
+  schedule:
+    # Every Friday at 6pm (UTC)
+    - cron: '0 18 * * 5'
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  send-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get weekly commits
+        id: commits
+        run: |
+          # Commits from last 7 days
+          COMMITS=$(git log --since="7 days ago" --pretty=format:"• %s" --no-merges | head -20)
+
+          if [ -z "$COMMITS" ]; then
+            COMMITS="No commits this week"
+          fi
+
+          # Escape for JSON
+          COMMITS_ESCAPED=$(echo "$COMMITS" | sed ':a;N;$!ba;s/\n/\\n/g' | sed 's/"/\\"/g')
+          echo "commits=$COMMITS_ESCAPED" >> $GITHUB_OUTPUT
+
+      - name: Send to Discord
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          curl -H "Content-Type: application/json" \
+            -d "{\"embeds\": [{\"title\": \"Weekly Update - Creature Nexus\", \"description\": \"${{ steps.commits.outputs.commits }}\", \"color\": 5814783, \"footer\": {\"text\": \"Week of $(date -d '7 days ago' '+%d/%m') to $(date '+%d/%m/%Y')\"}}]}" \
+            $DISCORD_WEBHOOK

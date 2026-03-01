@@ -1,0 +1,1045 @@
+{
+  "elements": {
+    "fire": "Feu",
+    "water": "Eau",
+    "air": "Air",
+    "earth": "Terre",
+    "all": "Tous"
+  },
+  "rarities": {
+    "common": "Commune",
+    "rare": "Rare",
+    "epic": "Épique",
+    "legendary": "Légendaire",
+    "mythic": "Mythique"
+  },
+  "attacks": {
+    "flare": "Ardeur",
+    "ascension": "Ascension",
+    "ember": "Braise",
+    "mist": "Brume",
+    "convergence": "Convergence",
+    "dissolution": "Dissolution",
+    "surge": "Déferlante",
+    "blaze": "Embrasement",
+    "foliage": "Feuillage",
+    "bloom": "Fleur",
+    "fusion": "Fusion",
+    "frost": "Givre",
+    "implosion": "Implosion",
+    "glow": "Incandescence",
+    "tide": "Marée",
+    "nexus": "Nexus",
+    "root": "Racine",
+    "gust": "Rafale",
+    "boulder": "Roche",
+    "break": "Rupture",
+    "resurgence": "Résurgence",
+    "breath": "Souffle",
+    "loam": "Terreau",
+    "wind": "Vent",
+    "swirl": "Volute",
+    "bark": "Écorce",
+    "foam": "Écume",
+    "rush": "Élan",
+    "awakening": "Éveil",
+    "burrow": "Terrier",
+    "rootlash": "Fouet racine",
+    "crush": "Écrasement",
+    "boulderfall": "Chute rocheuse"
+  },
+  "nav": {
+    "home": "Accueil",
+    "collection": "Collection",
+    "decks": "Decks",
+    "store": "Boutique",
+    "profile": "Profil",
+    "battle": "Combat"
+  },
+  "language": {
+    "title": "Choisissez votre langue",
+    "subtitle": "Vous pourrez changer cela plus tard dans Profil."
+  },
+  "notFound": {
+    "stackTitle": "Page introuvable",
+    "title": "Oups !",
+    "description": "Cet écran n'existe pas.",
+    "cta": "Retour à l'accueil"
+  },
+  "common": {
+    "ok": "OK",
+    "cancel": "Annuler",
+    "yes": "Oui",
+    "no": "Non",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "continue": "Continuer",
+    "complete": "Terminer",
+    "loading": "Chargement...",
+    "success": "Succès",
+    "error": "Erreur",
+    "open": "Ouvrir",
+    "lang": {
+      "english": "English",
+      "french": "Français"
+    },
+    "skip": "Passer",
+    "skipAll": "Tout passer",
+    "unknown": "Inconnu",
+    "confirm": "Confirmer"
+  },
+  "time": {
+    "justNow": "à l'instant",
+    "minuteAgo": "il y a 1 minute",
+    "minutesAgo": "il y a {{count}} minutes",
+    "hourAgo": "il y a 1 heure",
+    "hoursAgo": "il y a {{count}} heures",
+    "yesterday": "hier",
+    "daysAgo": "il y a {{count}} jours"
+  },
+  "home": {
+    "title": "Creature Nexus",
+    "subtitle": "Ouvrez un nouveau pack de cartes",
+    "openPack": "Ouvrir un pack",
+    "cardsCollected": "Cartes collectées",
+    "packsOpened": "Packs ouverts",
+    "packContains": "Chaque pack contient 5 cartes aléatoires",
+    "packContainsCreaturesOrSpells": "Chaque pack contient 5 cartes aléatoires (créatures ou sorts)",
+    "forceOpenDev": "⚠ Forcer l'ouverture (DEV)",
+    "cardRarities": "Raretés de cartes",
+    "loading": "Chargement de votre collection...",
+    "myPacks": "Mes packs",
+    "noUnopenedPacks": "Aucun pack non ouvert",
+    "noImage": "Pas d'image",
+    "earned": "Reçu {{when}}",
+    "nextPack": {
+      "title": "Prochain pack disponible dans :",
+      "comeBack": "Revenez plus tard pour ouvrir un autre pack !",
+      "ready": "Votre pack est prêt à être ouvert !"
+    }
+  },
+  "collection": {
+    "title": "Ma Collection",
+    "loading": "Chargement de votre collection...",
+    "emptyTitle": "Aucune carte trouvée",
+    "emptySubtitle": "Ouvrez des packs pour enrichir votre collection",
+    "collectedCount": "{{count}} {{count, plural, one {carte} other {cartes}}} collectée(s)",
+    "filters": {
+      "all": "Toutes"
+    }
+  },
+  "decks": {
+    "title": "Mes Decks",
+    "loading": "Chargement de votre collection...",
+    "newDeck": "+ Nouveau Deck",
+    "activeDeck": "Deck actif",
+    "builderTitle": "Éditeur de Deck",
+    "currentDeckButton": "Deck ({{count}})",
+    "allDecks": "Tous les decks ({{count}})",
+    "setActive": "Activer",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "emptyTitle": "Aucun deck créé",
+    "emptySubtitle": "Créez votre premier deck pour commencer à jouer !",
+    "currentDeck": "Deck actuel",
+    "deckName": "Nom du deck :",
+    "deckNamePlaceholder": "Entrez le nom du deck...",
+    "totalCards": "Cartes au total",
+    "totalCards": "Cartes au total : {{count}}/{{max}}",
+    "deckSize": "Deck : {{count}}/{{max}} cartes",
+    "needMore": "Encore {{count}} carte(s) nécessaire(s)",
+    "deckValid": "Deck valide",
+    "emptyDeck": "Aucune carte dans le deck. Ajoutez des cartes depuis votre collection !",
+    "quantity": "Quantité : {{count}}",
+    "inDeckCount": "Dans le deck : {{count}}/{{max}}",
+    "availableCount": "Disponible : {{count}}",
+    "remove": "Retirer",
+    "rulesTitle": "Règles du jeu",
+    "rulesA11y": "Afficher les règles du jeu",
+    "nameRequired": "Le nom du deck est requis.",
+    "save": "Sauvegarder",
+    "confirmDelete": {
+      "title": "Supprimer le deck",
+      "message": "Voulez-vous vraiment supprimer \"{{name}}\" ?",
+      "confirm": "Supprimer",
+      "cancel": "Annuler"
+    },
+    "updatedAt": "Mis à jour : {{date}}",
+    "tooSmallTitle": "Deck trop petit",
+    "tooSmallBody": "Votre deck doit contenir au moins {{min}} cartes.",
+    "invalidDeckTitle": "Deck invalide",
+    "invalidDeckMin": "Votre deck actif doit contenir au moins {{min}} cartes.",
+    "noActiveDeck": "Aucun deck actif sélectionné. Créez d'abord un deck.",
+    "selection": {
+      "title": "Choisissez votre deck",
+      "subtitle": "Sélectionnez le deck à utiliser pour ce combat",
+      "useActive": "Utiliser le deck actif",
+      "cardCount": "{{count}} cartes",
+      "needMin": "Au moins {{min}} cartes nécessaires",
+      "useDemo": "Utiliser le deck démo",
+      "demoName": "Deck de démarrage équilibré",
+      "demoStats": "20 cartes équilibrées",
+      "demoDesc": "Idéal pour apprendre et pour les nouveaux joueurs",
+      "noDeckMessage": "Créez un deck dans l'onglet Decks pour utiliser vos propres cartes !"
+    }
+  },
+  
+  "store": {
+    "title": "Boutique de Boosters",
+    "loading": "Chargement de la boutique...",
+    "openPack": "Ouvrir un pack",
+    "opening": "Ouverture du pack...",
+    "freePackInfo": "Un pack gratuit toutes les 12 heures !",
+    "packInventory": "Packs en inventaire",
+    "coins": "Nexus Coins",
+    "standard": "Standard",
+    "elemental": "Élémentaire",
+    "premium": "Premium",
+    "errorLoadCurrency": "Impossible de charger votre solde. Réessayez.",
+    "purchaseFailed": "Achat échoué",
+    "packOpenFailedRefunded": "Échec d'ouverture du pack. Vos Nexus Coins ont été remboursés.",
+    "packOpenFailedRefundFailed": "Échec d'ouverture et du remboursement. Contactez le support.",
+    "txnFailedTryAgain": "Transaction échouée. Réessayez.",
+    "purchaseFailedGeneric": "Échec de l'achat du pack. Réessayez.",
+    "confirmPurchaseTitle": "Confirmer l'achat",
+    "confirmPurchaseCoins": "Acheter {{quantity}} {{name}}{{plural}} pour {{cost}} Nexus Coins ?",
+    "notAvailableTitle": "Indisponible",
+    "notAvailableDesc": "Les achats intégrés ne sont disponibles que sur mobile. Merci d'utiliser l'application mobile.",
+    "productUnavailable": "Ce produit n'est pas disponible à l'achat.",
+    "confirmPurchaseRealMoney": "Acheter {{name}} pour {{price}} ?",
+    "purchaseSuccessTitle": "Achat réussi !",
+    "purchaseSuccessRealMoney": "Vous avez acheté {{name}} pour {{price}} !",
+    "purchaseSuccessCards": "Vous avez reçu {{count}} nouvelles cartes de {{name}} !",
+    "purchaseFailedComplete": "Échec de la finalisation de l'achat.",
+    "processPurchaseFailed": "Échec du traitement de l'achat. Réessayez.",
+    "bundleOffer": "Acheter {{quantity}} + {{bonus}} Offerts",
+    "claimFreePack": "Récupérer le pack gratuit"
+  },
+  "packOpening": {
+    "titleSingle": "Pack ouvert !",
+    "titleMulti": "Pack {{index}} sur {{total}}",
+    "subtitleSingle": "Vous avez reçu {{count}} nouvelles cartes",
+    "subtitleMulti": "Vous avez reçu {{count}} nouvelles cartes"
+  },
+  "packs": {
+    "cardCount": "{{count}} cartes",
+    "guaranteed": "+1 {{rarity}} garantie",
+    "standard_pack": {
+      "name": "Pack Standard",
+      "desc": "Contient 5 cartes aléatoires parmi toutes les créatures. Idéal pour étoffer votre collection !"
+    },
+    "fire_pack": {
+      "name": "Pack Feu",
+      "desc": "Contient 5 cartes de l'élément Feu. Parfait pour les decks mono‑Feu !"
+    },
+    "water_pack": {
+      "name": "Pack Eau",
+      "desc": "Contient 5 cartes de l'élément Eau. Plongez dans la puissance aquatique !"
+    },
+    "earth_pack": {
+      "name": "Pack Terre",
+      "desc": "Contient 5 cartes de l'élément Terre. Canalisez la force de la nature !"
+    },
+    "air_pack": {
+      "name": "Pack Air",
+      "desc": "Contient 5 cartes de l'élément Air. Envolez‑vous avec les vents !"
+    },
+    "mythic_guaranteed_pack": {
+      "name": "Pack Mythique Garanti",
+      "desc": "Contient 5 cartes avec au moins une Mythique garantie ! L'expérience premium ultime."
+    },
+    "legendary_guaranteed_pack": {
+      "name": "Pack Légendaire Garanti",
+      "desc": "Contient 5 cartes avec au moins une Légendaire garantie ! Qualité premium assurée."
+    }
+  },
+  "profile": {
+    "title": "Profil",
+    "subtitle": "Vos informations de jeu",
+    "accountTitle": "Compte",
+    "userId": "ID Utilisateur",
+    "accountType": "Type de compte",
+    "accountTypeAnonymous": "Anonyme",
+    "accountTypeRegistered": "Enregistré",
+    "email": "E-mail",
+    "created": "Créé le",
+    "saveProgressTitle": "⚠️ Sauvegardez votre progression",
+    "saveProgressText": "Vous jouez en mode anonyme. Créez un compte pour sauvegarder votre progression et accéder à votre collection depuis n'importe quel appareil !",
+    "createAccountEmail": "Créer un compte par e-mail",
+    "saveWithGoogle": "Sauvegarder avec Google",
+    "aboutTitle": "À propos de Creature Nexus TCG",
+    "aboutText": "Creature Nexus est un jeu de cartes à collectionner numérique avec des créatures mythiques. Collectionnez des cartes rares, construisez votre collection et découvrez des synergies puissantes.",
+    "github": "Dépôt GitHub",
+    "discord": "Rejoindre le Discord",
+    "website": "Site officiel",
+    "privacy": "Politique de confidentialité",
+    "language": "Langue",
+    "signOut": "Déconnexion",
+    "deleteAccount": "Supprimer le compte",
+    "appLanguage": "Langue de l'application",
+    "appLanguageDesc": "Choisissez la langue des menus et libellés",
+    "redeemTitle": "Code promotionnel",
+    "redeemEnterCode": "Saisir un code",
+    "redeemDesc": "Utilisez des codes pour obtenir des récompenses (Nexus Coins, boosters, etc.)",
+    "redeemButton": "Échanger",
+    "devToolsTitle": "Outils de développement",
+    "devToolsText": "Outils de test et de débogage pour l'équipe de développement.",
+  "cardIllustrationsTest": "Test des illustrations de cartes",
+  "storyMapVisualizer": "Visualiseur de Story Map",
+  "addCoinsDev": "Ajouter des Nexus Coins (Dev)",
+  "battlefieldThemeLab": "Laboratoire des arènes",
+  "battlefieldThemeLabSubtitle": "Prévisualisez les styles d'arène, les particules et les variations UI.",
+  "availableThemes": "Thèmes disponibles",
+  "themePreviewTitle": "Aperçu visuel",
+  "themeConfigTitle": "Configuration du thème",
+  "themeId": "ID du thème",
+  "fieldBorder": "Bordure du terrain",
+  "fieldBackground": "Fond du terrain",
+  "cardSpacing": "Espacement des cartes",
+  "particleEffects": "Effets de particules",
+  "autoValue": "auto",
+  "noneValue": "Aucun",
+  "gameSettings": "Paramètres du jeu",
+    "cardSize": "Taille des cartes",
+    "cardSizeDesc": "Choisissez l'affichage des cartes dans le jeu",
+    "cardSizeSmall": "Petite",
+    "cardSizeNormal": "Normale",
+    "battleLog": "Journal de combat",
+    "battleLogDesc": "Afficher ou masquer le journal pendant les combats",
+    "battleLogHidden": "Masqué",
+    "battleLogVisible": "Visible",
+    "screenShake": "Tremblement d'écran",
+    "screenShakeDesc": "Secouer l'écran lors des impacts en combat",
+    "screenShakeOff": "Désactivé",
+    "screenShakeOn": "Activé",
+    "turnBanner": "Bandeau de tour",
+    "turnBannerDesc": "Afficher un bandeau lors du changement de tour",
+    "turnBannerOff": "Désactivé",
+    "turnBannerOn": "Activé",
+    "resetStory": "Réinitialiser l'histoire",
+    "unlockAllChapters": "Débloquer tous les chapitres",
+    "animationDemo": "Démo d'animation",
+    "createAccountModalTitle": "Créer un compte",
+    "createAccountModalSubtitle": "Sécurisez votre progression en liant un e-mail et un mot de passe.",
+    "emailPlaceholder": "Email",
+    "passwordPlaceholder": "Mot de passe",
+    "cancel": "Annuler",
+    "saving": "Enregistrement...",
+    "saveAccount": "Enregistrer le compte",
+    "deleteAccountModalTitle": "Supprimer le compte",
+    "deleteAccountModalSubtitle": "Cette action est irréversible. Vos données seront définitivement supprimées.",
+    "confirmDelete": "Supprimer",
+    "version": "Creature Nexus TCG v{{version}}",
+    "signOutFailed": "Échec de la déconnexion. Réessayez.",
+    "enterEmailPassword": "Veuillez saisir l'e-mail et le mot de passe.",
+    "passwordTooShort": "Le mot de passe doit contenir au moins 6 caractères.",
+    "linkEmail": {
+      "success": "Votre compte a été enregistré ! Vous pouvez désormais vous connecter avec cet e‑mail depuis n'importe quel appareil.",
+      "errors": {
+        "weakPassword": "Le mot de passe doit contenir au moins 6 caractères.",
+        "emailInUse": "Cet e‑mail est déjà enregistré. Utilisez un autre e‑mail ou connectez‑vous.",
+        "invalidEmail": "Veuillez saisir une adresse e‑mail valide.",
+        "credentialInUse": "Cet e‑mail est déjà lié à un autre compte.",
+        "generic": "Échec de l'enregistrement du compte. Réessayez."
+      }
+    },
+    "linkGoogle": {
+      "success": "Votre compte a été enregistré avec Google ! Vous pouvez désormais vous connecter avec Google depuis n'importe quel appareil.",
+      "failed": "Échec de l'association avec Google. Réessayez."
+    },
+    "deleteAccountFailed": "Échec de la suppression du compte. Réessayez.",
+    "dev": {
+      "addCoinsSuccess": "Ajout de {{amount}} Nexus Coins à votre compte !",
+      "addCoinsFailed": "Échec de l'ajout des Nexus Coins. Réessayez.",
+      "resetStorySuccess": "La progression du mode histoire a été réinitialisée !",
+      "resetStoryFailed": "Échec de la réinitialisation de la progression. Réessayez.",
+      "unlockAllSuccess": "Tous les chapitres ont été débloqués !",
+      "unlockAllFailed": "Échec du déblocage des chapitres. Réessayez."
+    }
+  },
+  "avatar": {
+    "title": "Avatar",
+    "changeAvatar": "Changer d'avatar",
+    "selectAvatar": "Sélectionnez votre avatar",
+    "selectAvatarDesc": "Choisissez une créature pour vous représenter",
+    "defaultAvatar": "Par défaut",
+    "avatarUpdated": "Avatar mis à jour avec succès !",
+    "avatarUpdateFailed": "Échec de la mise à jour de l'avatar. Veuillez réessayer."
+  },
+  "pseudo": {
+    "defaultPseudo": "Joueur",
+    "changePseudo": "Changer de pseudo",
+    "changeUsed": "Pseudo changé",
+    "changePseudoTitle": "Changer votre pseudo",
+    "changePseudoWarning": "Attention : Vous ne pouvez changer votre pseudo qu'une seule fois !",
+    "pseudoPlaceholder": "Entrez votre nouveau pseudo",
+    "pseudoHint": "{{min}}-{{max}} caractères, lettres, chiffres et underscore uniquement",
+    "pseudoUpdated": "Pseudo mis à jour avec succès !",
+    "pseudoUpdateFailed": "Échec de la mise à jour du pseudo. Veuillez réessayer.",
+    "errorTooShort": "Le pseudo est trop court",
+    "errorTooLong": "Le pseudo est trop long",
+    "errorInvalidChars": "Le pseudo ne peut contenir que des lettres, chiffres et underscore"
+  },
+  "cardTest": {
+    "subtitle": "Total : {{total}} cartes ({{monsters}} monstres, {{spells}} sorts)",
+    "monsterSection": "Cartes Monstres",
+    "spellSection": "Cartes Sorts",
+    "rarityHeader": "{{rarity}} ({{count}} cartes)",
+    "footer": "Vérifiez chaque carte pour détecter les illustrations manquantes ou incorrectes"
+  },
+  "demo": {
+    "animation": {
+      "title": "Démo d'animation",
+      "subtitle": "Appuyez pour voir différentes animations d'énergie et de sorts",
+      "buttons": {
+        "orb": "Animation Orbe",
+        "wave": "Animation Vague",
+        "spellHuman": "Lancer de sort (Humain)",
+        "spellAI": "Lancer de sort (IA)",
+        "rewardCoins": "Récompense : Coins",
+        "rewardPack": "Récompense : Pack",
+        "rewardCard": "Récompense : Carte"
+      },
+      "gameSubtitle": "Les animations apparaissent par-dessus le jeu sans le perturber",
+      "genericPack": "Pack"
+    }
+  },
+  "animations": {
+    "energyGain": "+{{amount}} Énergie ⚡",
+    "energyGainPlural": "+{{amount}} Énergies ⚡"
+  },
+  "devStoryMap": {
+    "subtitle": "Testez et concevez des cartes d'histoire",
+    "generateNodes": "Générer des nœuds",
+    "numberOfBattles": "Nombre de combats",
+    "generate": "Générer",
+    "battleNodes": "Nœuds de combat ({{count}})",
+    "nodeLabel": "Nœud {{index}}",
+    "battleIdPlaceholder": "ID du combat",
+    "battleNamePlaceholder": "Nom du combat",
+    "xPositionPlaceholder": "Position X (0-100)",
+    "yPositionPlaceholder": "Position Y (0-100)",
+    "bossButtonBoss": "👑 Boss",
+    "bossButtonNormal": "Normal",
+    "connectionsLabel": "Connexions :",
+    "addConnection": "Ajouter une connexion",
+    "preview": "Prévisualiser la StoryMap",
+    "previewTitle": "Aperçu StoryMap",
+    "backToEditor": "Retour à l'éditeur",
+    "battleSelectedTitle": "Combat sélectionné",
+    "battleSelectedMessage": "Vous avez sélectionné : {{name}}",
+    "autoBattleName": "Combat {{index}}",
+    "autoBossName": "Combat de boss",
+    "sample": {
+      "chapterName": "Chapitre test",
+      "chapterDescription": "Un chapitre de test pour le visualiseur StoryMap",
+      "battleDescription": "Combat test : {{name}}",
+      "firstBattle": "Premier combat",
+      "secondBattle": "Deuxième combat",
+      "bossBattle": "Combat de boss"
+    }
+  },
+  "redeem": {
+    "codeRedeemedTitle": "Code utilisé !",
+    "redemptionFailedTitle": "Échec de l’échange",
+    "rewardsAdded": "Récompenses ajoutées à votre compte",
+    "invalidCode": "Code invalide",
+    "failedGeneric": "Échec de l’échange du code. Réessayez.",
+    "reward": {
+      "coins": "Vous avez reçu {{amount}} Nexus Coins !",
+      "pack": "Vous avez reçu {{name}} !",
+      "card": "Vous avez reçu {{name}} !"
+    }
+  },
+  "auth": {
+    "preparing": "Préparation en cours...",
+    "subtitle": "Le jeu de cartes ultime",
+    "start": "Commencer l'aventure",
+    "signInWithEmail": "Se connecter par e‑mail",
+    "continueWithGoogle": "Continuer avec Google",
+    "terms": {
+      "prefix": "En continuant, vous acceptez nos Conditions d'utilisation et notre ",
+      "privacy": "Politique de confidentialité",
+      "suffix": ""
+    },
+    "modal": {
+      "title": "Connexion",
+      "subtitle": "Ravi de vous revoir ! Connectez‑vous pour accéder à votre collection."
+    },
+    "emailPlaceholder": "Email",
+    "passwordPlaceholder": "Mot de passe",
+    "signingIn": "Connexion...",
+    "signIn": "Se connecter",
+    "enterEmailPassword": "Veuillez saisir l'email et le mot de passe.",
+    "googleFailed": "Échec de la connexion Google. Réessayez.",
+    "errors": {
+      "userNotFound": "Aucun compte trouvé avec cet email. Vérifiez votre email ou créez un compte.",
+      "wrongPassword": "Mot de passe incorrect. Réessayez.",
+      "invalidEmail": "Veuillez saisir une adresse email valide.",
+      "userDisabled": "Ce compte a été désactivé. Contactez le support.",
+      "tooManyRequests": "Trop de tentatives. Réessayez plus tard.",
+      "generic": "Échec de la connexion. Vérifiez vos identifiants."
+    }
+  },
+  "alerts": {
+    "deckSaved": "Deck enregistré avec succès !",
+    "deckDeleted": "Deck supprimé avec succès !",
+    "setActive": "\"{{name}}\" est maintenant votre deck actif !",
+    "errorSaveDeck": "Échec de l'enregistrement du deck. Réessayez.",
+    "errorDeleteDeck": "Échec de la suppression du deck. Réessayez.",
+    "errorSetActive": "Échec de l'activation du deck. Réessayez."
+  },
+  "audio": {
+    "enableTitle": "Activer le son",
+    "enableSubtitle": "Touchez pour activer la musique de fond",
+    "enableButton": "Activer",
+    "settingsTitle": "Paramètres audio",
+    "backgroundMusic": "Musique de fond",
+    "musicVolume": "Volume de la musique",
+    "soundEffects": "Effets sonores",
+    "effectsVolume": "Volume des effets",
+    "nowPlaying": "Lecture en cours :",
+    "noMusic": "Aucune musique",
+    "battleMusic": "Musique de combat"
+  },
+  "game": {
+    "title": "Creature Nexus TCG",
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "newGame": "Nouvelle partie",
+    "playAgain": "Rejouer",
+    "returnToMenu": "Retour au menu",
+    "noCreaturesOnField": "Aucune créature sur le terrain",
+    "turnLabel": "Tour {{n}} - {{who}}",
+    "yourTurn": "Votre tour",
+    "aiTurn": "Tour de l'IA",
+    "phaseLabel": "Phase : {{phase}}",
+    "aiStatus": {
+      "thinking": "Réflexion...",
+      "analyzing_hand": "Analyse de la main...",
+      "selecting_card_to_play": "Sélection de la carte à jouer...",
+      "selecting_attacker": "Choix de l'attaquant...",
+      "selecting_attack": "Choix de l'attaque...",
+      "selecting_target": "Sélection de la cible...",
+      "selecting_card_to_retire": "Sélection de la carte à retirer...",
+      "attacking_directly": "Attaque directe...",
+      "executing_action": "Exécution de l'action...",
+      "ending_turn": "Fin du tour...",
+      "default": "Traitement..."
+    },
+    "aiAction": {
+      "planning": "L'IA planifie son tour...",
+      "analyzing": "Analyse des options disponibles...",
+      "selectingCardToPlay": "Sélection d'une carte à jouer...",
+      "choosingAttacker": "Choix de l'attaquant...",
+      "preparingAttack": "Préparation de {{name}}...",
+      "selectingTarget": "Sélection d'une cible...",
+      "attackingDirectly": "Attaque directe...",
+      "selectingCardToRetire": "Sélection d'une carte à retirer...",
+      "executing": "Exécution de l'action...",
+      "endingTurn": "Fin du tour...",
+      "defaultAttackName": "l'attaque"
+    },
+    "attackMode": "Mode Attaque : sélectionnez une cible pour {{name}}",
+    "quit": "Quitter",
+    "cardNotFoundTitle": "Carte introuvable",
+    "cardNotFoundBody": "La carte sélectionnée est introuvable dans votre main."
+  },
+  "player": {
+    "you": "Vous",
+    "opponent": "Adversaire",
+    "ai": "IA adversaire",
+    "energy": "Énergie",
+    "points": "Points",
+    "hp": "PV",
+    "deck": "Deck",
+    "hand": "Main",
+    "field": "Terrain",
+    "yourField": "Votre terrain",
+    "opponentField": "Terrain adverse"
+  },
+  "cards": {
+    "costEnergy": "Coût : {{value}} Énergie",
+    "retreat": "retrait : ⚡"
+  },
+  "actions": {
+    "play": "Jouer",
+    "cast": "Lancer",
+    "attack": "Attaquer",
+    "retire": "Retirer",
+    "endTurn": "Fin du tour",
+    "selectTarget": "Sélectionner une cible",
+    "directAttack": "Attaque directe",
+    "selectTargetHint": "Touchez une créature adverse pour attaquer"
+  },
+  "combat": {
+    "damage": "Dégâts",
+    "advantage": "Avantage",
+    "disadvantage": "Désavantage",
+    "cannotAttack": "Ne peut pas attaquer",
+    "mythicCooldown": "Recharge mythique",
+    "notEnoughEnergy": "Énergie insuffisante",
+    "insufficientEnergySpell": "Ce sort requiert {{required}} d'énergie, mais vous n'avez que {{current}}.",
+    "insufficientEnergyAttack": "Cette attaque requiert {{required}} d'énergie, mais vous n'avez que {{current}}.",
+    "fieldFullTitle": "Terrain plein",
+    "fieldFullBody": "Vous ne pouvez pas avoir plus de 4 créatures sur le terrain.",
+    "noTargetsTitle": "Aucune cible",
+    "noTargetsBody": "Il n'y a aucune créature ennemie à attaquer."
+  },
+  "battle": {
+    "previewFieldLabel": "Terrain de prévisualisation",
+    "previewOpponentField": "Terrain adverse (aperçu)",
+    "noCreaturesPreview": "Aucune créature d'exemple",
+    "actionLog": "Journal d'actions",
+    "log": {
+      "playCard": "Carte jouée",
+      "castSpell": "Sort lancé",
+      "attackCreature": "Attaque une créature",
+      "attackDirect": "Attaque directe",
+      "retireCard": "Carte retirée",
+      "unknown": "Action inconnue",
+      "noActions": "Aucune action pour le moment...",
+      "turn": "Tour {{turn}}"
+    },
+    "arena": {
+      "title": "Arène de combat",
+      "subtitle": "Choisissez votre mode de combat",
+      "quickTitle": "Combat rapide",
+      "quickDescription": "Plongez directement dans un duel contre l'IA",
+      "storyTitle": "Mode Histoire",
+      "storyDescription": "Partez pour une aventure épique au cœur du Nexus",
+      "tutorialTitle": "Tutoriel de combat",
+      "tutorialDescription": "Suivez un affrontement guidé pour comprendre chaque mécanique"
+    },
+    "detail": {
+      "unknownPlayer": "Joueur inconnu",
+      "unknownCard": "une carte",
+      "unknownTarget": "la cible",
+      "defaultAttack": "une attaque",
+      "playCard": "A joué {{name}}",
+      "playCardUnknown": "A joué une carte",
+      "castSpell": "A lancé {{name}}",
+      "castSpellUnknown": "A lancé un sort",
+      "attackCreature": "{{attacker}} a attaqué {{target}} avec {{attack}}",
+      "attackCreatureNoAttack": "{{attacker}} a attaqué {{target}}",
+      "attackDirect": "{{attacker}} a attaqué directement avec {{attack}}",
+      "attackDirectNoAttack": "{{attacker}} a attaqué directement",
+      "retireCard": "A retiré {{name}}",
+      "retireCardUnknown": "A retiré une carte",
+      "endTurn": "A terminé son tour",
+      "unknown": "A effectué une action"
+    }
+  },
+  "rules": {
+    "sections": {
+      "basics": "Bases",
+      "turn": "Tour & Phases",
+      "energySpells": "Énergie & Sorts",
+      "attacksAffinity": "Attaques & Affinité",
+      "targetsScoring": "Cibles & Score",
+      "deckBuilding": "Construction de deck"
+    },
+    "basics": {
+      "hand": "Chaque joueur commence avec 5 cartes en main.",
+      "field": "Capacité du terrain : jusqu'à 4 créatures.",
+      "energyStart": "Au début du tour : +1 énergie par défaut."
+    },
+    "turn": {
+      "drawEnergy": "Début du tour : piochez une carte et gagnez de l'énergie.",
+      "mainPhase": "Phase principale : jouer des créatures (gratuit), lancer des sorts, attaquer, retirer.",
+      "autoEnd": "Fin de tour automatique s'il n'y a plus d'attaques possibles."
+    },
+    "energy": {
+      "attacksCost": "Les attaques consomment le coût en énergie.",
+      "retireCost": "Retirer coûte 1 énergie et renvoie la créature en main.",
+      "catalyst": "Energy Catalyst (sort légendaire) : à partir du prochain tour, gagnez une énergie égale au numéro du tour."
+    },
+    "attacks": {
+      "p1NoAttack": "Le joueur 1 ne peut pas attaquer au tour global 1.",
+      "onePerTurn": "Une attaque par créature et par tour.",
+      "mythicCooldown": "Les créatures mythiques ne peuvent attaquer qu'une fois tous les 4 tours."
+    },
+    "affinity": {
+      "title": "Modificateurs d'affinité (+20 / −20) :",
+      "line1": "Eau > Feu (+20), Feu > Air (+20), Air > Terre (+20), Terre > Eau (+20)",
+      "line2": "Match inversé : −20. ‘All’ est neutre."
+    },
+    "targets": {
+      "creatureKill": "Contre créature : si la cible meurt, l'attaquant gagne +1 point.",
+      "win": "Victoire à 4 points.",
+      "lose": "Défaite si deck vide ou terrain vide après le tour global 2."
+    },
+    "deck": {
+      "size": "Taille du deck : 20–60 cartes.",
+      "copies": "Max 3 copies par modèle de carte (par nom).",
+      "save": "Vous pouvez enregistrer plusieurs decks ; un deck actif est conservé."
+    }
+  },
+  "game_over": {
+    "victory": "Victoire !",
+    "defeat": "Défaite !",
+    "winner": "Vainqueur",
+    "reason": {
+      "points": "4 points atteints",
+      "noCards": "L'adversaire n'a plus de cartes",
+      "noMonsters": "L'adversaire n'a plus de créatures"
+    },
+    "defeat_reason": {
+      "points": "L'adversaire a atteint 4 points",
+      "noCards": "Vous n'avez plus de cartes",
+      "noMonsters": "Vous n'avez plus de créatures"
+    },
+    "demoCta": {
+      "title": "Vous aimez la démo ?\nAidez-nous à améliorer le jeu !",
+      "button": "Rejoindre le Discord"
+    }
+  },
+  "phases": {
+    "draw": "Phase de pioche",
+    "main": "Phase principale",
+    "combat": "Phase de combat",
+    "end": "Phase de fin"
+  },
+  "story": {
+    "loading": "Chargement du mode histoire...",
+    "menu": {
+      "title": "Mode Histoire",
+      "subtitle": "Choisissez votre aventure",
+      "footer": "Parcourez les mondes élémentaires et percez les mystères du Nexus"
+    },
+    "chapter": {
+      "label": "Chapitre {{id}}",
+      "progressShort": "{{completed}}/{{total}} combats",
+      "progressFull": "{{completed}}/{{total}} combats terminés",
+      "locked": "Terminez le chapitre précédent pour le débloquer"
+    },
+    "chapterMap": {
+      "loading": "Chargement du chapitre...",
+      "progress": "Progression : {{completed}}/{{total}} combats",
+      "completed": "✓ Chapitre terminé !",
+      "replayTitle": "Combat terminé",
+      "replayMessage": "Vous avez déjà terminé ce combat. Voulez-vous le rejouer ?",
+      "replay": "Rejouer",
+      "start": "Lancer le combat",
+      "difficultyLabel": "Difficulté :",
+      "difficulty": {
+        "boss": "Combat de boss",
+        "normal": "Combat normal"
+      },
+      "elementLabel": "Élément :"
+    },
+    "data": {
+      "chapter_1": {
+        "name": "Nexus central",
+        "description": "Le mystérieux hub où convergent toutes les énergies élémentaires. Découvrez l'origine des portails du Nexus.",
+        "battles": {
+          "nexus_1": {
+            "name": "Première rencontre",
+            "description": "Votre premier combat dans le Nexus mystérieux"
+          },
+          "nexus_2": {
+            "name": "Découverte du portail",
+            "description": "Percez les secrets des portails élémentaires"
+          },
+          "nexus_3": {
+            "name": "Gardiens anciens",
+            "description": "Affrontez les anciens protecteurs du Nexus"
+          },
+          "nexus_4": {
+            "name": "Convergence élémentaire",
+            "description": "Assistez à la puissance des éléments réunis"
+          },
+          "nexus_boss": {
+            "name": "Gardien du cœur du Nexus",
+            "description": "Affrontez la puissante entité au cœur du Nexus"
+          }
+        }
+      },
+      "chapter_2": {
+        "name": "Monde aquatique",
+        "description": "Plongez dans les profondeurs peuplées de créatures marines et de cristaux de glace.",
+        "battles": {
+          "water_1": {
+            "name": "Bassins de marée",
+            "description": "Explorez les eaux peu profondes et leurs habitants"
+          },
+          "water_2": {
+            "name": "Jardins de corail",
+            "description": "Naviguez au milieu de jardins sous-marins éclatants"
+          },
+          "water_3": {
+            "name": "Cavernes gelées",
+            "description": "Aventurez-vous dans les grottes glacées"
+          },
+          "water_4": {
+            "name": "Courants profonds",
+            "description": "Affrontez les créatures des abysses"
+          },
+          "water_5": {
+            "name": "Bord du maelström",
+            "description": "Bravez les défis au bord du grand tourbillon"
+          },
+          "water_boss": {
+            "name": "Portail du Léviathan",
+            "description": "Affrontez l'immense gardien du Portail aquatique"
+          }
+        }
+      },
+      "chapter_3": {
+        "name": "Monde du feu",
+        "description": "Bravez les paysages brûlants de volcans, de coulées de magma et de cendres ardentes.",
+        "battles": {
+          "fire_1": {
+            "name": "Plaines braises",
+            "description": "Traversez les prairies fumantes"
+          },
+          "fire_2": {
+            "name": "Rivières de lave",
+            "description": "Naviguez entre les fleuves de roche en fusion"
+          },
+          "fire_3": {
+            "name": "Tempêtes de cendres",
+            "description": "Survivez aux tempêtes volcaniques aveuglantes"
+          },
+          "fire_4": {
+            "name": "Chambres de magma",
+            "description": "Explorez le cœur des chambres volcaniques"
+          },
+          "fire_5": {
+            "name": "Bord du cratère",
+            "description": "Tenez-vous au bord du grand cratère volcanique"
+          },
+          "fire_boss": {
+            "name": "Portail infernal",
+            "description": "Affrontez le gardien flamboyant du Portail de feu"
+          }
+        }
+      },
+      "chapter_4": {
+        "name": "Monde de la terre",
+        "description": "Traversez forêts denses, montagnes imposantes et formations rocheuses vivantes.",
+        "battles": {
+          "earth_1": {
+            "name": "Bosquet ancestral",
+            "description": "Marchez parmi les arbres les plus anciens"
+          },
+          "earth_2": {
+            "name": "Jardins de pierre",
+            "description": "Cheminez dans les formations rocheuses vivantes"
+          },
+          "earth_3": {
+            "name": "Réseaux racinaires",
+            "description": "Découvrez les autoroutes souterraines de racines"
+          },
+          "earth_4": {
+            "name": "Pics montagneux",
+            "description": "Gravissez les sommets les plus élevés"
+          },
+          "earth_5": {
+            "name": "Cavernes cristallines",
+            "description": "Explorez les grottes remplies de cristaux terrestres"
+          },
+          "earth_boss": {
+            "name": "Portail de Terra",
+            "description": "Affrontez le gardien titanesque de la Terre"
+          }
+        }
+      },
+      "chapter_5": {
+        "name": "Monde de l'air",
+        "description": "Volez à travers îles flottantes, courants venteux et tempêtes électriques.",
+        "battles": {
+          "air_1": {
+            "name": "Vallées des vents",
+            "description": "Planez dans les vallées aux vents éternels"
+          },
+          "air_2": {
+            "name": "Îles flottantes",
+            "description": "Bondissez de terre en terre suspendue"
+          },
+          "air_3": {
+            "name": "Nuages orageux",
+            "description": "Combattez au cœur des orages"
+          },
+          "air_4": {
+            "name": "Ponts célestes",
+            "description": "Traversez les passerelles éthérées du ciel"
+          },
+          "air_5": {
+            "name": "Flèches de foudre",
+            "description": "Gravissez les tours d'énergie pure"
+          },
+          "air_boss": {
+            "name": "Portail des tempêtes",
+            "description": "Affrontez le gardien orageux de l'Air"
+          }
+        }
+      },
+      "chapter_6": {
+        "name": "Retour au Nexus final",
+        "description": "Retournez dans un Nexus transformé où toutes les énergies élémentaires se heurtent.",
+        "battles": {
+          "final_1": {
+            "name": "Convergence instable",
+            "description": "Naviguez à travers les tempêtes élémentaires chaotiques"
+          },
+          "final_2": {
+            "name": "Chaos élémentaire",
+            "description": "Affrontez la fusion des forces élémentaires"
+          },
+          "final_3": {
+            "name": "Éveil mythique",
+            "description": "Soyez témoin de l'éveil des créatures mythiques anciennes"
+          },
+          "final_4": {
+            "name": "Cœur du Nexus",
+            "description": "Atteignez le centre du Nexus déstabilisé"
+          },
+          "final_boss": {
+            "name": "Entité ultime du Nexus",
+            "description": "Affrontez l'entité ultime qui menace tous les mondes"
+          }
+        }
+      }
+    },
+    "battleLockedTitle": "Combat verrouillé",
+    "battleLockedDesc": "Terminez les combats précédents pour déverrouiller celui-ci.",
+    "errors": {
+      "chapterNotFound": "Chapitre introuvable",
+      "battleNotFound": "Combat introuvable",
+      "initFailed": "Échec de l'initialisation du combat"
+    },
+    "leaveBattle": {
+      "title": "Quitter le combat",
+      "message": "Voulez-vous vraiment quitter ce combat ? Votre progression sera perdue.",
+      "confirm": "Quitter",
+      "cancel": "Rester"
+    },
+    "preparingBattle": "Préparation du combat...",
+    "loadingGame": "Chargement de la partie...",
+    "noDecksAvailable": {
+      "title": "Aucun deck disponible",
+      "message": "Vous devez créer au moins un deck avant d'entrer en combat. Allez dans l'onglet Decks pour créer votre premier deck.",
+      "goToDecks": "Aller aux Decks",
+      "cancel": "Annuler"
+    },
+    "battleComplete": {
+      "victoryTitle": "Victoire !",
+      "victoryMessage": "Vous avez vaincu {{name}} ! {{tail}}",
+      "victoryMessageWithReason": "Vous avez vaincu {{name}} !\n{{reason}}.\n{{tail}}",
+      "victoryTailBoss": "Boss vaincu !",
+      "victoryTail": "Bien joué !",
+      "defeatTitle": "Défaite",
+      "defeatMessage": "Vous avez été vaincu par {{name}}. Entraînez-vous et réessayez !",
+      "defeatMessageWithReason": "Vous avez été vaincu par {{name}}.\n{{reason}}.\nEntraînez-vous et réessayez !",
+      "retry": "Recommencer",
+      "returnToMap": "Retour à la carte"
+    }
+  },
+  "tutorial": {
+    "speakers": {
+      "nexusGuide": "Guide du Nexus",
+      "collectionGuide": "Guide de la Collection",
+      "deckMaster": "Maître des Decks",
+      "nexusMerchant": "Marchand du Nexus",
+      "battleGuide": "Mentor de Combat"
+    },
+    "firstLaunch": {
+      "welcome": "Bienvenue dans le Nexus des Créatures, invocateur ! Je suis votre guide dans ce royaume mystique.",
+      "realmOverview": "Ici, des créatures venues de tous les mondes élémentaires se rencontrent. Votre aventure commence maintenant !",
+      "choiceReady": "Je suis prêt !",
+      "choiceExplain": "Parlez-moi davantage de cet endroit",
+      "loreIntersection": "Le Nexus est le point de rencontre de quatre royaumes élémentaires : Feu, Eau, Terre et Air.",
+      "loreBalance": "Des êtres anciens ont perturbé l'équilibre. Vous ne restaurerez l'harmonie qu'en maîtrisant des créatures de tous les éléments.",
+      "storyIntro": "Laissez-moi vous faire visiter. Nous commencerons par le mode Histoire pour apprendre les bases."
+    },
+    "storyIntro": {
+      "opening": "Voici le mode Histoire, là où votre aventure prend forme !",
+      "chapterNodes": "Voici les nœuds de chapitre. Touchez-en un pour voir les combats qu'il contient.",
+      "realmOverview": "Chaque chapitre vous emmène dans un royaume élémentaire différent avec ses propres défis.",
+      "unlock": "Terminez les combats d'un chapitre pour déverrouiller le royaume suivant.",
+      "cta": "Prêt à lancer votre premier combat ? Touchez le chapitre 1 !"
+    },
+    "chapterMapIntro": {
+      "welcome": "Bienvenue au chapitre 1 : le royaume de l'Eau !",
+      "battleNodes": "Voici les nœuds de combat. Chacun représente une rencontre unique.",
+      "statusLegend": "Les combats terminés brillent en or, ceux disponibles prennent la couleur du chapitre, et les nœuds inaccessibles sont assombris.",
+      "progression": "Vous devez terminer les combats pour progresser dans le chapitre.",
+      "cta": "Touchez le premier combat pour commencer !"
+    },
+    "homeIntro": {
+      "opening": "Voici votre base. D'ici, vous accédez à toutes les fonctionnalités du Nexus.",
+      "dailyPack": "Utilisez ce bouton pour ouvrir votre pack quotidien lorsqu'il est prêt.",
+      "packInventory": "Tous les packs non ouverts apparaîtront ici.",
+      "openPacks": "Touchez un pack pour l'ouvrir et découvrir de nouvelles créatures !"
+    },
+    "collectionIntro": {
+      "welcome": "Bienvenue dans votre collection ! C'est ici que vivent toutes vos créatures.",
+      "cardGrid": "Vous voyez ici toutes les créatures que vous avez réunies.",
+      "rarityInfo": "Les cartes sont organisées par rareté : Commune, Rare, Épique, Légendaire et l'ultra-rare Mythique !",
+      "strategyHint": "Chaque carte affiche son élément, ses PV et ses attaques. Étudiez-les pour préparer vos stratégies !"
+    },
+    "deckBuilderIntro": {
+      "opening": "Il est temps de construire votre propre deck ! C'est ici que la stratégie commence.",
+      "highlightEntry": "Touchez ici pour ouvrir l'éditeur de deck.",
+      "promptOpen": "Allez, touchez \"Nouveau deck\" pour ouvrir l'éditeur - je vous attends !",
+      "tourIntro": "Parfait ! Laissez-moi vous montrer les zones clés de l'éditeur.",
+      "infoPanel": "Suivez ici la taille de votre deck et sa légalité.",
+      "filters": "Utilisez ces filtres pour cibler certaines raretés de cartes.",
+      "grid": "Touchez des cartes dans votre collection pour les ajouter au deck.",
+      "currentDeck": "Ouvrez votre deck actuel pour le renommer ou retirer des cartes.",
+      "save": "Quand la liste vous convient, enregistrez-la ici.",
+      "limitReminder": "Rappelez-vous : un deck doit contenir entre 20 et 60 cartes avec jusqu'à 3 copies de chaque créature.",
+      "encouragement": "Expérimentez différentes combinaisons - il n'existe pas de deck parfait !"
+    },
+    "storeIntro": {
+      "welcome": "Bienvenue dans ma boutique, valeureux invocateur !",
+      "coinBalance": "Ici, vous voyez votre réserve de pièces du Nexus.",
+      "packShop": "Voici les packs disponibles à l'achat.",
+      "standardPacks": "Les packs standards contiennent des créatures de tous les éléments.",
+      "elementalPacks": "Les packs élémentaires garantissent des créatures d'un élément précis.",
+      "premiumPacks": "Les packs premium garantissent des créatures rares - parfait pour les collectionneurs déterminés !",
+      "freePack": "N'oubliez pas - vous recevez un pack gratuit toutes les 12 heures !"
+    },
+    "battle": {
+      "loading": "Préparation du tutoriel de combat...",
+      "exitTitle": "Quitter le tutoriel ?",
+      "exitMessage": "Si vous quittez maintenant, vous retournerez à l'arène et la progression guidée sera perdue.",
+      "exitConfirm": "Quitter le tutoriel"
+    },
+    "battleIntro": {
+      "welcome": "Bienvenue dans votre premier combat ! Je vais vous guider pas à pas.",
+      "playerStatusBar": "Voici votre barre d'état. Elle indique votre énergie disponible, le nombre de cartes dans votre main et vos points. Collectez 4 points pour remporter la partie.",
+      "enemyStatusBar": "Voici la barre d'état de votre adversaire. Elle affiche les mêmes informations que la vôtre. Surveillez bien son total de points : s'il en obtient 4, la partie est perdue !",
+      "energy": "Ce panneau affiche votre énergie. Vous en gagnez 1 au début de chaque tour.",
+      "hand": "Voici les cartes de votre main. Chaque créature indique ses PV et ses attaques.",
+      "cardsCost": "Poser une carte est gratuit - l'énergie sert uniquement à lancer des attaques ou à retirer une créature du terrain.",
+      "playPrompt": "Essayez de jouer une carte. Touchez n'importe quelle carte de votre main, puis appuyez sur Jouer.",
+      "playReminder": "Allez-y — touchez une carte pour la placer sur le champ de bataille !",
+      "cardPlaced": "Parfait ! Votre créature est maintenant en jeu.",
+      "playMore": "Placez trois autres créatures pour remplir votre ligne de front avec quatre combattants.",
+      "playMoreReminder": "Continuez à poser des créatures jusqu'à en avoir quatre sur le champ de bataille.",
+      "battlefield": "Voici le champ de bataille. Vos créatures actives combattent depuis cette zone.",
+      "firstTurnNoAttack": "Au premier tour, vous ne pouvez pas attaquer : profitez-en pour installer votre stratégie.",
+      "enemyField": "Voici le terrain de votre adversaire. C'est ici que vous choisirez les créatures à cibler.",
+      "turnStatus": "Cette zone indique le joueur actif et la phase en cours. Consultez-la pour savoir quand agir.",
+      "attackIntro": "Passons à l'attaque ! Touchez votre créature pour voir ses attaques.",
+      "attackReminder": "Touchez votre créature sur le champ de bataille pour continuer.",
+      "attackExplain": "Chaque attaque affiche son coût en énergie. Choisissez-en une et sélectionnez une cible pour infliger des dégâts.",
+      "autoEnd": "Dès que toutes les créatures capables d'attaquer l'ont fait, votre tour s'achève automatiquement.",
+      "manualEnd": "Vous pouvez quand même terminer le tour manuellement si vous préférez garder des actions ou passer plus vite.",
+      "fieldManage": "Si vous voulez jouer ou retirer des créatures, faites-le avant d'utiliser toutes vos attaques — retirer une créature coûte 1 énergie.",
+      "endTurnReminder": "Quand tout est prêt, appuyez sur Fin du tour pour laisser l'adversaire jouer.",
+      "endTurnButton": "Quand vous avez terminé, appuyez ici pour finir votre tour.",
+      "turnCycle": "Votre adversaire jouera ensuite son tour, puis ce sera à vous à nouveau.",
+      "attackReady": "L'adversaire a joué. C'est le moment de lancer une attaque !",
+      "strategyHeading": "Quelques conseils stratégie :",
+      "strategyEnergy": "Gérez votre énergie avec soin : les actions puissantes coûtent davantage.",
+      "strategyAffinity": "Les affinités élémentaires modifient les dégâts infligés : un élément favorable ajoute +20 points, un élément défavorable en retire 20. L'Eau bat le Feu, le Feu bat l'Air, l'Air bat la Terre et la Terre bat l'Eau.",
+      "strategyPlanning": "Planifiez vos tours. Garder de l'énergie pour le tour suivant peut être la meilleure option.",
+      "attackPreview": "Observez l'aperçu des dégâts lorsque vous choisissez une attaque : le vert indique un bonus élémentaire de +20, le rouge un malus de -20 et le blanc signale qu'il n'y a ni bonus ni malus.",
+      "closing": "Voilà tout ce qu'il faut pour débuter !",
+      "farewell": "Bonne chance, et que le Nexus vous guide !"
+    }
+  }
+}

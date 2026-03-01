@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Energy Catalyst",
+    "element": "all",
+    "rarity": "legendary",
+    "effect": "Permanent effect: Gain energy equal to turn number instead of 1 each turn (starts next turn)",
+    "energyCost": 0,
+    "spellType": "permanent",
+    "targetType": "self"
+  }
+]

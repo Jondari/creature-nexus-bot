@@ -1,0 +1,728 @@
+[
+  {
+    "name": "Ashion",
+    "rarity": "rare",
+    "element": "fire",
+    "hp": 75,
+    "attacks": [
+      {
+        "name": "blaze",
+        "damage": 45,
+        "energy": 3
+      }
+    ]
+  },
+  {
+    "name": "Barkyn",
+    "rarity": "common",
+    "element": "earth",
+    "hp": 110,
+    "attacks": [
+      {
+        "name": "bloom",
+        "damage": 35,
+        "energy": 2
+      }
+    ]
+  },
+  {
+    "name": "Barkys",
+    "rarity": "epic",
+    "element": "earth",
+    "hp": 100,
+    "attacks": [
+      {
+        "name": "root",
+        "damage": 55,
+        "energy": 4
+      }
+    ]
+  },
+  {
+    "name": "Caelel",
+    "rarity": "common",
+    "element": "air",
+    "hp": 90,
+    "attacks": [
+      {
+        "name": "rush",
+        "damage": 25,
+        "energy": 2
+      }
+    ]
+  },
+  {
+    "name": "Caeloth",
+    "rarity": "rare",
+    "element": "air",
+    "hp": 80,
+    "attacks": [
+      {
+        "name": "swirl",
+        "damage": 30,
+        "energy": 2
+      }
+    ]
+  },
+  {
+    "name": "Caelun",
+    "rarity": "epic",
+    "element": "air",
+    "hp": 90,
+    "attacks": [
+      {
+        "name": "swirl",
+        "damage": 55,
+        "energy": 4
+      }
+    ]
+  },
+  {
+    "name": "Cryel",
+    "rarity": "rare",
+    "element": "water",
+    "hp": 60,
+    "attacks": [
+      {
+        "name": "frost",
+        "damage": 45,
+        "energy": 3
+      }
+    ]
+  },
+  {
+    "name": "Cryil",
+    "rarity": "common",
+    "element": "water",
+    "hp": 65,
+    "attacks": [
+      {
+        "name": "tide",
+        "damage": 10,
+        "energy": 1
+      }
+    ]
+  },
+  {
+    "name": "Draleth",
+    "rarity": "common",
+    "element": "fire",
+    "hp": 65,
+    "attacks": [
+      {
+        "name": "blaze",
+        "damage": 35,
+        "energy": 2
+      }
+    ]
+  },
+  {
+    "name": "Dralis",
+    "rarity": "epic",
+    "element": "fire",
+    "hp": 70,
+    "attacks": [
+      {
+        "name": "foliage",
+        "damage": 50,
+        "energy": 3
+      }
+    ]
+  },
+  {
+    "name": "Eileth",
+    "rarity": "rare",
+    "element": "air",
+    "hp": 95,
+    "attacks": [
+      {
+        "name": "gust",
+        "damage": 25,
+        "energy": 2
+      }
+    ]
+  },
+  {
+    "name": "Flareen",
+    "rarity": "common",
+    "element": "fire",
+    "hp": 60,
+    "attacks": [
+      {
+        "name": "flare",
+        "damage": 30,
+        "energy": 2
+      }
+    ]
+  },
+  {
+    "name": "Flareor",
+    "rarity": "common",
+    "element": "fire",
+    "hp": 85,
+    "attacks": [
+      {
+        "name": "ember",
+        "damage": 30,
+        "energy": 2
+      }
+    ]
+  },
+  {
+    "name": "Glacis",
+    "rarity": "common",
+    "element": "water",
+    "hp": 85,
+    "attacks": [
+      {
+        "name": "mist",
+        "damage": 25,
+        "energy": 2
+      }
+    ]
+  },
+  {
+	"name": "Golrok",
+	"rarity": "legendary",
+	"element": "earth",
+	"hp": 125,
+	"attacks": [
+	  {
+		"name": "crush", 
+		"damage": 65, 
+		"energy": 4 
+	  },
+	  {
+		"name": "boulderfall", 
+		"damage": 75, 
+		"energy": 5 
+	  }
+	]
+  },
+  {
+    "name": "Groan",
+    "rarity": "epic",
+    "element": "earth",
+    "hp": 90,
+    "attacks": [
+      {
+        "name": "bloom",
+        "damage": 55,
+        "energy": 4
+      }
+    ]
+  },
+  {
+    "name": "Hydys",
+    "rarity": "common",
+    "element": "water",
+    "hp": 85,
+    "attacks": [
+      {
+        "name": "foam",
+        "damage": 30,
+        "energy": 2
+      }
+    ]
+  },
+  {
+    "name": "Ignen",
+    "rarity": "common",
+    "element": "fire",
+    "hp": 70,
+    "attacks": [
+      {
+        "name": "ember",
+        "damage": 30,
+        "energy": 2
+      }
+    ]
+  },
+  {
+    "name": "Ignys",
+    "rarity": "common",
+    "element": "fire",
+    "hp": 60,
+    "attacks": [
+      {
+        "name": "ember",
+        "damage": 30,
+        "energy": 2
+      }
+    ]
+  },
+  {
+    "name": "Lumel",
+    "rarity": "common",
+    "element": "earth",
+    "hp": 110,
+    "attacks": [
+      {
+        "name": "bark",
+        "damage": 25,
+        "energy": 2
+      }
+    ]
+  },
+  {
+    "name": "Lumen",
+    "rarity": "common",
+    "element": "earth",
+    "hp": 115,
+    "attacks": [
+      {
+        "name": "bloom",
+        "damage": 35,
+        "energy": 2
+      }
+    ]
+  },
+  {
+    "name": "Lumion",
+    "rarity": "common",
+    "element": "earth",
+    "hp": 80,
+    "attacks": [
+      {
+        "name": "root",
+        "damage": 30,
+        "energy": 2
+      }
+    ]
+  },
+  {
+    "name": "Lumoth",
+    "rarity": "common",
+    "element": "earth",
+    "hp": 125,
+    "attacks": [
+      {
+        "name": "boulder",
+        "damage": 20,
+        "energy": 1
+      }
+    ]
+  },
+  {
+    "name": "Miriion",
+    "rarity": "common",
+    "element": "water",
+    "hp": 60,
+    "attacks": [
+      {
+        "name": "frost",
+        "damage": 35,
+        "energy": 2
+      }
+    ]
+  },
+  {
+    "name": "Miriis",
+    "rarity": "rare",
+    "element": "water",
+    "hp": 70,
+    "attacks": [
+      {
+        "name": "frost",
+        "damage": 45,
+        "energy": 3
+      }
+    ]
+  },
+  {
+    "name": "Miriys",
+    "rarity": "common",
+    "element": "water",
+    "hp": 60,
+    "attacks": [
+      {
+        "name": "mist",
+        "damage": 20,
+        "energy": 1
+      }
+    ]
+  },
+  {
+    "name": "Mossil",
+    "rarity": "common",
+    "element": "earth",
+    "hp": 105,
+    "attacks": [
+      {
+        "name": "loam",
+        "damage": 25,
+        "energy": 2
+      }
+    ]
+  },
+  {
+    "name": "Mossion",
+    "rarity": "rare",
+    "element": "earth",
+    "hp": 110,
+    "attacks": [
+      {
+        "name": "bark",
+        "damage": 45,
+        "energy": 3
+      }
+    ]
+  },
+  {
+    "name": "Mossor",
+    "rarity": "rare",
+    "element": "earth",
+    "hp": 125,
+    "attacks": [
+      {
+        "name": "bark",
+        "damage": 45,
+        "energy": 3
+      }
+    ]
+  },
+  {
+    "name": "Mythanor",
+    "rarity": "mythic",
+    "element": "all",
+    "hp": 155,
+    "attacks": [
+      {
+        "name": "convergence",
+        "damage": 80,
+        "energy": 0
+      },
+      {
+        "name": "awakening",
+        "damage": 95,
+        "energy": 0
+      }
+    ]
+  },
+  {
+    "name": "Mythelgorn",
+    "rarity": "mythic",
+    "element": "all",
+    "hp": 155,
+    "attacks": [
+      {
+        "name": "ascension",
+        "damage": 90,
+        "energy": 0
+      },
+      {
+        "name": "break",
+        "damage": 80,
+        "energy": 0
+      }
+    ]
+  },
+  {
+    "name": "Mytholzak",
+    "rarity": "mythic",
+    "element": "all",
+    "hp": 160,
+    "attacks": [
+      {
+        "name": "nexus",
+        "damage": 80,
+        "energy": 0
+      },
+      {
+        "name": "surge",
+        "damage": 95,
+        "energy": 0
+      }
+    ]
+  },
+  {
+    "name": "Mythunden",
+    "rarity": "mythic",
+    "element": "all",
+    "hp": 150,
+    "attacks": [
+      {
+        "name": "fusion",
+        "damage": 80,
+        "energy": 0
+      },
+      {
+        "name": "implosion",
+        "damage": 95,
+        "energy": 0
+      }
+    ]
+  },
+  {
+    "name": "Mythévor",
+    "rarity": "mythic",
+    "element": "all",
+    "hp": 155,
+    "attacks": [
+      {
+        "name": "resurgence",
+        "damage": 90,
+        "energy": 0
+      },
+      {
+        "name": "dissolution",
+        "damage": 80,
+        "energy": 0
+      }
+    ]
+  },
+  {
+    "name": "Nixeth",
+    "rarity": "epic",
+    "element": "water",
+    "hp": 65,
+    "attacks": [
+      {
+        "name": "mist",
+        "damage": 55,
+        "energy": 4
+      }
+    ]
+  },
+  {
+    "name": "Nixor",
+    "rarity": "common",
+    "element": "water",
+    "hp": 90,
+    "attacks": [
+      {
+        "name": "tide",
+        "damage": 10,
+        "energy": 1
+      }
+    ]
+  },
+  {
+    "name": "Pyrrun",
+    "rarity": "rare",
+    "element": "fire",
+    "hp": 60,
+    "attacks": [
+      {
+        "name": "ember",
+        "damage": 30,
+        "energy": 2
+      }
+    ]
+  },
+  {
+    "name": "Radeth",
+    "rarity": "common",
+    "element": "earth",
+    "hp": 80,
+    "attacks": [
+      {
+        "name": "bloom",
+        "damage": 20,
+        "energy": 1
+      }
+    ]
+  },
+  {
+    "name": "Selel",
+    "rarity": "legendary",
+    "element": "water",
+    "hp": 70,
+    "attacks": [
+      {
+        "name": "tide",
+        "damage": 65,
+        "energy": 4
+      },
+      {
+        "name": "foam",
+        "damage": 75,
+        "energy": 5
+      }
+    ]
+  },
+  {
+    "name": "Seleth",
+    "rarity": "rare",
+    "element": "water",
+    "hp": 90,
+    "attacks": [
+      {
+        "name": "frost",
+        "damage": 45,
+        "energy": 3
+      }
+    ]
+  },
+  {
+    "name": "Silen",
+    "rarity": "rare",
+    "element": "air",
+    "hp": 90,
+    "attacks": [
+      {
+        "name": "rush",
+        "damage": 25,
+        "energy": 2
+      }
+    ]
+  },
+  {
+    "name": "Solen",
+    "rarity": "legendary",
+    "element": "fire",
+    "hp": 85,
+    "attacks": [
+      {
+        "name": "glow",
+        "damage": 60,
+        "energy": 4
+      },
+      {
+        "name": "flare",
+        "damage": 55,
+        "energy": 4
+      }
+    ]
+  },
+  {
+    "name": "Solor",
+    "rarity": "rare",
+    "element": "fire",
+    "hp": 75,
+    "attacks": [
+      {
+        "name": "blaze",
+        "damage": 35,
+        "energy": 2
+      }
+    ]
+  },
+  {
+    "name": "Stonelorn",
+    "rarity": "legendary",
+    "element": "earth",
+    "hp": 120,
+    "attacks": [
+      {
+	    "name": "burrow", 
+	    "damage": 50, 
+	    "energy": 3 
+	  },
+      {
+	    "name": "rootlash",
+	    "damage": 70,
+	    "energy": 5 
+	  }
+    ]
+  },
+  {
+    "name": "Venten",
+    "rarity": "common",
+    "element": "air",
+    "hp": 85,
+    "attacks": [
+      {
+        "name": "breath",
+        "damage": 15,
+        "energy": 1
+      }
+    ]
+  },
+  {
+    "name": "Ventun",
+    "rarity": "common",
+    "element": "air",
+    "hp": 70,
+    "attacks": [
+      {
+        "name": "wind",
+        "damage": 20,
+        "energy": 1
+      }
+    ]
+  },
+  {
+    "name": "Ventyn",
+    "rarity": "common",
+    "element": "air",
+    "hp": 70,
+    "attacks": [
+      {
+        "name": "wind",
+        "damage": 30,
+        "energy": 2
+      }
+    ]
+  },
+  {
+    "name": "Verdil",
+    "rarity": "rare",
+    "element": "earth",
+    "hp": 125,
+    "attacks": [
+      {
+        "name": "boulder",
+        "damage": 35,
+        "energy": 2
+      }
+    ]
+  },
+  {
+    "name": "Whisun",
+    "rarity": "common",
+    "element": "air",
+    "hp": 85,
+    "attacks": [
+      {
+        "name": "wind",
+        "damage": 20,
+        "energy": 1
+      }
+    ]
+  },
+  {
+    "name": "Zarel",
+    "rarity": "common",
+    "element": "fire",
+    "hp": 75,
+    "attacks": [
+      {
+        "name": "foliage",
+        "damage": 30,
+        "energy": 2
+      }
+    ]
+  },
+  {
+    "name": "Zephor",
+    "rarity": "common",
+    "element": "air",
+    "hp": 100,
+    "attacks": [
+      {
+        "name": "gust",
+        "damage": 15,
+        "energy": 1
+      }
+    ]
+  },
+  {
+    "name": "Zephun",
+    "rarity": "legendary",
+    "element": "air",
+    "hp": 80,
+    "attacks": [
+      {
+        "name": "wind",
+        "damage": 60,
+        "energy": 4
+      },
+      {
+        "name": "breath",
+        "damage": 75,
+        "energy": 5
+      }
+    ]
+  }
+]

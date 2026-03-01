@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "825183736507",
+    "project_id": "creature-nexus-tcg",
+    "storage_bucket": "creature-nexus-tcg.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:825183736507:android:e49f7409951da95d36cf9e",
+        "android_client_info": {
+          "package_name": "com.jondari.creaturenexustcg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "825183736507-i9vvs2u2fgnsqq2oh4hsqt532jqrkfml.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jondari.creaturenexustcg",
+            "certificate_hash": "99cc6ff861b8c53da406c8b1c43e90a553aaee32"
+          }
+        },
+        {
+          "client_id": "825183736507-ietqkk2bgg71pvp4lc692r57a35666uf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jondari.creaturenexustcg",
+            "certificate_hash": "99203f982aab37ce084e3323faad0d90371b6fa6"
+          }
+        },
+        {
+          "client_id": "825183736507-ract3jmrhg89vbt695d9kgdr8s7p329v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrLGy9d2wD0FbsFXnHO8BzKuhdh6G3UyY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "825183736507-ract3jmrhg89vbt695d9kgdr8s7p329v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
