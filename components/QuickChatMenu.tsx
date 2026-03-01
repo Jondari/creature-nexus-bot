@@ -1,18 +1,31 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
+import Animated, {
+  runOnJS,
+  useAnimatedStyle,
+  useSharedValue,
+  withDelay,
+  withSequence,
+  withSpring,
+  withTiming,
+} from 'react-native-reanimated';
 import { PlayerAvatar } from '@/components/PlayerAvatar';
 import Colors from '@/constants/Colors';
 
 const DEFAULT_MESSAGES = ['GG!', 'Nice!', 'Oops!'];
 const BUBBLE_DURATION_MS = 2000;
+/** How long the exit animation runs before state is cleared (ms). */
+const BUBBLE_EXIT_MS = 150;
 const COOLDOWN_MS = 3000;
+/** Duration of the picker slide-out before it unmounts (ms). */
+const PICKER_EXIT_MS = 120;
 
 interface QuickChatMenuProps {
   /** Forwarded to PlayerAvatar for the creature image. */
   creatureName?: string | null;
-  /** Preset messages shown in the picker. Defaults to ['GG!', 'Nice!', 'Oops!']. */
+  /** Preset messages shown in the picker. Defaults to content-neutral placeholders. */
   presetMessages?: string[];
-  /** Called with the selected message once the cooldown check passes. */
+  /** Called with the selected message so callers can publish the quick_chat event. */
   onChat: (message: string) => void;
   /** Size passed through to PlayerAvatar. Defaults to 'small'. */
   avatarSize?: 'small' | 'medium' | 'large';
@@ -21,12 +34,13 @@ interface QuickChatMenuProps {
 /**
  * QuickChatMenu
  *
- * Renders the player avatar as a tappable button. Tapping opens a small preset
- * message picker. Selecting a message:
- *   1. Hides the picker.
- *   2. Shows a speech bubble above the avatar for 2 seconds.
- *   3. Calls onChat(message) so callers can publish the event.
- *   4. Starts a 3-second cooldown; additional taps are ignored until it expires.
+ * Renders the player avatar as a tappable button.
+ *
+ * Flow:
+ *   1. Tap avatar (cooldown not active) → preset message picker slides in.
+ *   2. Tap a preset message → picker slides out, speech bubble springs in above.
+ *   3. Bubble auto-hides after 2 s with a fade + scale exit.
+ *   4. Avatar dims to 45 % opacity for the 3 s cooldown, then fades back to full.
  */
 export function QuickChatMenu({
   creatureName = null,
@@ -37,107 +51,211 @@ export function QuickChatMenu({
   const [menuVisible, setMenuVisible] = useState(false);
   const [bubbleText, setBubbleText] = useState<string | null>(null);
 
-  /** Timestamp (ms) of the last sent chat message – used for cooldown. */
   const lastChatAt = useRef<number>(0);
   const bubbleTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const pickerExitTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Clean up the auto-hide timer on unmount.
+  // ── Shared animation values ────────────────────────────────────────────────
+  const bubbleScale = useSharedValue(0.7);
+  const bubbleOpacity = useSharedValue(0);
+
+  const pickerTranslateY = useSharedValue(12);
+  const pickerOpacity = useSharedValue(0);
+
+  const avatarScale = useSharedValue(1);
+  const avatarOpacity = useSharedValue(1);
+
+  // ── Animated styles ────────────────────────────────────────────────────────
+  const bubbleStyle = useAnimatedStyle(() => ({
+    opacity: bubbleOpacity.value,
+    transform: [{ scale: bubbleScale.value }],
+  }));
+
+  const pickerStyle = useAnimatedStyle(() => ({
+    opacity: pickerOpacity.value,
+    transform: [{ translateY: pickerTranslateY.value }],
+  }));
+
+  const avatarAnimStyle = useAnimatedStyle(() => ({
+    opacity: avatarOpacity.value,
+    transform: [{ scale: avatarScale.value }],
+  }));
+
+  // ── Animate bubble entrance when bubbleText becomes non-null ───────────────
+  useEffect(() => {
+    if (bubbleText !== null) {
+      bubbleScale.value = 0.7;
+      bubbleOpacity.value = 0;
+      bubbleScale.value = withSpring(1, { damping: 14, stiffness: 200 });
+      bubbleOpacity.value = withTiming(1, { duration: 150 });
+    }
+  }, [bubbleText]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // ── Animate picker entrance when menu becomes visible ─────────────────────
+  useEffect(() => {
+    if (menuVisible) {
+      pickerTranslateY.value = 12;
+      pickerOpacity.value = 0;
+      pickerTranslateY.value = withSpring(0, { damping: 16, stiffness: 220 });
+      pickerOpacity.value = withTiming(1, { duration: 150 });
+    }
+  }, [menuVisible]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // ── Cleanup on unmount ─────────────────────────────────────────────────────
   useEffect(() => {
     return () => {
       if (bubbleTimer.current !== null) clearTimeout(bubbleTimer.current);
+      if (pickerExitTimer.current !== null) clearTimeout(pickerExitTimer.current);
     };
   }, []);
 
+  // ── Helpers ────────────────────────────────────────────────────────────────
+
+  /** Animate picker out, then unmount after the animation finishes. */
+  const hidePicker = useCallback(() => {
+    pickerOpacity.value = withTiming(0, { duration: PICKER_EXIT_MS });
+    pickerTranslateY.value = withTiming(12, { duration: PICKER_EXIT_MS });
+    if (pickerExitTimer.current !== null) clearTimeout(pickerExitTimer.current);
+    pickerExitTimer.current = setTimeout(
+      () => setMenuVisible(false),
+      PICKER_EXIT_MS + 10,
+    );
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  /** Animate bubble out, then clear the text after the animation finishes. */
+  const hideBubble = useCallback(() => {
+    bubbleOpacity.value = withTiming(0, { duration: BUBBLE_EXIT_MS });
+    bubbleScale.value = withTiming(0.7, { duration: BUBBLE_EXIT_MS }, (finished: boolean) => {
+      if (finished) runOnJS(setBubbleText)(null);
+    });
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // ── Event handlers ─────────────────────────────────────────────────────────
+
   const handleAvatarPress = useCallback(() => {
     const now = Date.now();
-    if (now - lastChatAt.current < COOLDOWN_MS) return; // Cooldown active – ignore.
-    setMenuVisible(prev => !prev);
-  }, []);
+    if (now - lastChatAt.current < COOLDOWN_MS) return; // still in cooldown
+
+    if (menuVisible) {
+      hidePicker();
+    } else {
+      setMenuVisible(true);
+    }
+  }, [menuVisible, hidePicker]);
 
   const handleSelectMessage = useCallback(
     (message: string) => {
       lastChatAt.current = Date.now();
-      setMenuVisible(false);
+
+      // Close picker with exit animation.
+      hidePicker();
+
+      // Show bubble (entrance animation fires via useEffect on bubbleText).
       setBubbleText(message);
+
+      // Notify caller so it can publish the quick_chat event.
       onChat(message);
 
-      // Auto-hide the bubble after BUBBLE_DURATION_MS.
+      // Dim avatar during cooldown, then restore opacity.
+      avatarOpacity.value = withSequence(
+        withTiming(0.45, { duration: 150 }),
+        withDelay(COOLDOWN_MS - 300, withTiming(1, { duration: 300 })),
+      );
+
+      // Auto-hide bubble: start exit animation slightly before clearing state.
       if (bubbleTimer.current !== null) clearTimeout(bubbleTimer.current);
-      bubbleTimer.current = setTimeout(() => setBubbleText(null), BUBBLE_DURATION_MS);
+      bubbleTimer.current = setTimeout(hideBubble, BUBBLE_DURATION_MS - BUBBLE_EXIT_MS);
     },
-    [onChat],
+    [onChat, hidePicker, hideBubble], // eslint-disable-line react-hooks/exhaustive-deps
   );
+
+  const handlePressIn = useCallback(() => {
+    avatarScale.value = withSpring(0.92, { damping: 18, stiffness: 300 });
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const handlePressOut = useCallback(() => {
+    avatarScale.value = withSpring(1, { damping: 14, stiffness: 220 });
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // ── Render ─────────────────────────────────────────────────────────────────
 
   return (
     <View style={styles.container}>
-      {/* Speech bubble – appears above the avatar for 2 s after a message is sent */}
+
+      {/* ── Speech bubble ─────────────────────────────────────────────────── */}
       {bubbleText !== null && (
-        <View style={styles.bubble}>
+        <Animated.View style={[styles.bubble, bubbleStyle]}>
           <Text style={styles.bubbleText}>{bubbleText}</Text>
-          {/* Downward-pointing tail connecting the bubble to the avatar */}
+          {/* Downward-pointing tail linking bubble to avatar below. */}
           <View style={styles.bubbleTail} />
-        </View>
+        </Animated.View>
       )}
 
-      {/* Avatar – tap to open the quick-chat picker */}
-      <TouchableOpacity
-        onPress={handleAvatarPress}
-        activeOpacity={0.75}
-        accessibilityLabel="Quick chat"
-        accessibilityRole="button"
-      >
-        <PlayerAvatar creatureName={creatureName} size={avatarSize} />
-      </TouchableOpacity>
+      {/* ── Avatar (tappable) ─────────────────────────────────────────────── */}
+      <Animated.View style={avatarAnimStyle}>
+        <Pressable
+          onPress={handleAvatarPress}
+          onPressIn={handlePressIn}
+          onPressOut={handlePressOut}
+          accessibilityLabel="Quick chat"
+          accessibilityRole="button"
+        >
+          <PlayerAvatar creatureName={creatureName} size={avatarSize} />
+        </Pressable>
+      </Animated.View>
 
-      {/* Preset message picker – shown while menuVisible */}
+      {/* ── Preset message picker (horizontal pill row) ───────────────────── */}
       {menuVisible && (
-        <View style={styles.menu}>
-          {presetMessages.map(msg => (
-            <TouchableOpacity
+        <Animated.View style={[styles.menu, pickerStyle]}>
+          {presetMessages.map((msg) => (
+            <Pressable
               key={msg}
-              style={styles.menuItem}
+              style={({ pressed }) => [styles.pill, pressed && styles.pillPressed]}
               onPress={() => handleSelectMessage(msg)}
-              activeOpacity={0.8}
             >
-              <Text style={styles.menuItemText}>{msg}</Text>
-            </TouchableOpacity>
+              <Text style={styles.pillText}>{msg}</Text>
+            </Pressable>
           ))}
-        </View>
+        </Animated.View>
       )}
+
     </View>
   );
 }
+
+// ── Styles ───────────────────────────────────────────────────────────────────
 
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
   },
 
-  // ── Speech bubble ──────────────────────────────────────────────────────────
+  // Speech bubble
   bubble: {
-    backgroundColor: Colors.background.card,
+    alignItems: 'center',
+    backgroundColor: Colors.background.secondary,
     borderRadius: 10,
-    borderWidth: 1,
-    borderColor: Colors.neutral?.[300] ?? '#ccc',
+    borderWidth: 1.5,
+    borderColor: Colors.primary[400],
     paddingHorizontal: 10,
     paddingVertical: 6,
     marginBottom: 4,
-    maxWidth: 120,
-    alignItems: 'center',
-    // Shadow
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.15,
-    shadowRadius: 2,
-    elevation: 3,
+    minWidth: 60,
+    maxWidth: 140,
+    // Subtle blue glow matching the border accent.
+    shadowColor: Colors.primary[400],
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 0.45,
+    shadowRadius: 6,
+    elevation: 4,
   },
   bubbleText: {
     color: Colors.text.primary,
     fontSize: 13,
-    fontWeight: '600',
+    fontWeight: '700',
     textAlign: 'center',
   },
-  /** Downward triangle tail below the bubble text area. */
+  /** Downward-pointing triangle tail. Colour matches the border accent. */
   bubbleTail: {
     width: 0,
     height: 0,
@@ -146,36 +264,30 @@ const styles = StyleSheet.create({
     borderTopWidth: 7,
     borderLeftColor: 'transparent',
     borderRightColor: 'transparent',
-    borderTopColor: Colors.background.card,
-    marginTop: 2,
-    alignSelf: 'center',
+    borderTopColor: Colors.primary[400],
+    marginTop: 3,
   },
 
-  // ── Preset message picker ─────────────────────────────────────────────────
+  // Preset message picker
   menu: {
-    marginTop: 4,
-    backgroundColor: Colors.background.card,
-    borderRadius: 8,
+    marginTop: 6,
+    flexDirection: 'row',
+    gap: 6,
+  },
+  pill: {
+    backgroundColor: Colors.primary[700],
+    borderRadius: 16,
     borderWidth: 1,
-    borderColor: Colors.neutral?.[300] ?? '#ccc',
-    overflow: 'hidden',
-    minWidth: 80,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
-    shadowRadius: 3,
-    elevation: 4,
+    borderColor: Colors.primary[400],
+    paddingHorizontal: 10,
+    paddingVertical: 5,
   },
-  menuItem: {
-    paddingHorizontal: 14,
-    paddingVertical: 8,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: Colors.neutral?.[200] ?? '#eee',
+  pillPressed: {
+    backgroundColor: Colors.primary[500],
   },
-  menuItemText: {
+  pillText: {
     color: Colors.text.primary,
-    fontSize: 13,
-    fontWeight: '500',
-    textAlign: 'center',
+    fontSize: 12,
+    fontWeight: '600',
   },
 });

@@ -37,6 +37,7 @@ export const Z_INDEX = {
   DAMAGE_EFFECT: 10,
   DAMAGE_NUMBER: 11,
   ATTACK_EFFECT: 12,
+  DIALOGUE_TOAST: 15,
   TURN_BANNER: 20,
   GAME_OVER: 30,
 } as const;

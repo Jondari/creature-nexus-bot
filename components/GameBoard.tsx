@@ -32,8 +32,17 @@ import { useScreenShake } from '../hooks/useScreenShake';
 import { TurnTransitionBanner } from './Animation/TurnTransitionBanner';
 import { GameOverAnimation } from './Animation/GameOverAnimation';
 import { QuickChatMenu } from './QuickChatMenu';
+import { BattleDialogueToast } from './BattleDialogueToast';
+import { BattleDialogueTriggers } from '../modules/dialogue/BattleDialogueTriggers';
+import type { DialogueTrigger } from '../types/dialogue';
 
-export function GameBoard() {
+interface GameBoardProps {
+  /** Optional dialogue triggers evaluated against the battle engine each turn.
+   *  Callers supply their own DialogueTrigger[] – GameBoard is content-neutral. */
+  initialTriggers?: DialogueTrigger[];
+}
+
+export function GameBoard({ initialTriggers = [] }: GameBoardProps) {
   const { 
     gameState, 
     gameEngine, 
@@ -72,6 +81,10 @@ export function GameBoard() {
   const wasAITurnRef = useRef<boolean | null>(null);
   const { shakeStyle, triggerShake } = useScreenShake();
 
+  // ── BattleDialogueTriggers ─────────────────────────────────────────────────
+  const dialogueEngine = useRef(new BattleDialogueTriggers());
+  const [dialogueMessages, setDialogueMessages] = useState<string[]>([]);
+
   // Screen shake on damage impacts (respects user setting)
   const prevDamageCountRef = useRef(damageAnimations.length);
   useEffect(() => {
@@ -81,6 +94,41 @@ export function GameBoard() {
     }
     prevDamageCountRef.current = damageAnimations.length;
   }, [damageAnimations.length, screenShake]);
+
+  // ── BattleDialogueTriggers: reset engine when a new battle starts ──────────
+  useEffect(() => {
+    if (gameState && !gameState.isGameOver) {
+      dialogueEngine.current.reset();
+    }
+  }, [gameState?.isGameOver]);
+
+  // ── BattleDialogueTriggers: evaluate turn-based triggers each new turn ─────
+  useEffect(() => {
+    if (!gameState || gameState.isGameOver || initialTriggers.length === 0) return;
+    const msgs = dialogueEngine.current.evaluate(initialTriggers, {
+      turnNumber: gameState.turnNumber,
+    });
+    if (msgs.length > 0) setDialogueMessages(msgs);
+  }, [gameState?.turnNumber]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // ── BattleDialogueTriggers: evaluate damage-action triggers ───────────────
+  useEffect(() => {
+    if (!gameState || gameState.isGameOver || initialTriggers.length === 0) return;
+    if (damageAnimations.length === 0) return;
+
+    const latest = damageAnimations[damageAnimations.length - 1];
+    // Find the damaged card in either player's field to compute hpPercent.
+    const allCards = gameState.players.flatMap(p => p.field);
+    const card = allCards.find(c => c.id === latest.cardId);
+    const hpPercent = card ? card.hp / (card.maxHp ?? card.hp) : undefined;
+
+    const msgs = dialogueEngine.current.evaluate(initialTriggers, {
+      turnNumber: gameState.turnNumber,
+      actionType: 'damage',
+      hpPercent,
+    });
+    if (msgs.length > 0) setDialogueMessages(msgs);
+  }, [damageAnimations.length]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Anchor refs for tutorial highlights
   const topFieldRef = useRef<View | null>(null);
@@ -768,6 +816,12 @@ export function GameBoard() {
           onComplete={clearSpellCastAnimation}
         />
       )}
+
+      {/* Dialogue Toasts — messages produced by BattleDialogueTriggers.evaluate() */}
+      <BattleDialogueToast
+        messages={dialogueMessages}
+        onDismiss={() => setDialogueMessages([])}
+      />
 
       {/* Turn Transition Banner — from queue (AI→player) or local state (player→AI) */}
       <TurnTransitionBanner
