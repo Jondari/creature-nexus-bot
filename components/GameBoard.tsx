@@ -31,6 +31,7 @@ import Animated from 'react-native-reanimated';
 import { useScreenShake } from '../hooks/useScreenShake';
 import { TurnTransitionBanner } from './Animation/TurnTransitionBanner';
 import { GameOverAnimation } from './Animation/GameOverAnimation';
+import { QuickChatMenu } from './QuickChatMenu';
 
 export function GameBoard() {
   const { 
@@ -678,8 +679,14 @@ export function GameBoard() {
           { label: t('player.hand'), value: playerAtBottom.hand.length },
         ]}
         containerRef={bottomStatsRef as any}
-        avatarCreature={avatarCreature}
         avatarPosition="left"
+        avatarComponent={
+          <QuickChatMenu
+            creatureName={avatarCreature}
+            avatarSize="small"
+            onChat={(msg) => publishEvent({ type: 'quick_chat', message: msg })}
+          />
+        }
       />
 
       {/* Bottom Player Hand */}

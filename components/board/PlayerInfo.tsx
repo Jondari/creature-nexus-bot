@@ -15,6 +15,8 @@ interface PlayerInfoProps {
   containerRef?: React.Ref<View>;
   avatarCreature?: string | null;
   avatarPosition?: 'left' | 'right';
+  /** When provided, renders this node instead of the default PlayerAvatar. */
+  avatarComponent?: React.ReactNode;
 }
 
 export function PlayerInfo({
@@ -24,15 +26,20 @@ export function PlayerInfo({
   containerRef,
   avatarCreature,
   avatarPosition = 'left',
+  avatarComponent,
 }: PlayerInfoProps) {
-  const showAvatar = avatarCreature !== undefined;
+  const showAvatar = avatarComponent !== undefined || avatarCreature !== undefined;
   const isAvatarLeft = avatarPosition === 'left';
 
   const renderAvatar = () => {
     if (!showAvatar) return null;
     return (
       <View style={styles.avatarContainer}>
-        <PlayerAvatar creatureName={avatarCreature} size="small" />
+        {avatarComponent !== undefined ? (
+          avatarComponent
+        ) : (
+          <PlayerAvatar creatureName={avatarCreature} size="small" />
+        )}
       </View>
     );
   };

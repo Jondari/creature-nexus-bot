@@ -234,7 +234,8 @@ export type SceneUserEvent =
   | { type: 'card_played' }
   | { type: 'creature_selected' }
   | { type: 'attack_used' }
-  | { type: 'turn_ended' };
+  | { type: 'turn_ended' }
+  | { type: 'quick_chat'; message: string };
 
 // Scene debugging interface (dev mode)
 export interface SceneDebugger {
